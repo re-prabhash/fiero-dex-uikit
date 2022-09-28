@@ -11,7 +11,12 @@ interface ReturnType {
   onPresentNetworkModal: () => void;
 }
 
-const useWalletModal = (login: Login, logout: () => void, account?: string, networks?:Array<NetworkConfig>): ReturnType => {
+const useWalletModal = (
+  login: Login,
+  logout: () => void,
+  account?: string,
+  networks?: Array<NetworkConfig>
+): ReturnType => {
   const [onPresentConnectModal] = useModal(<ConnectModal login={login} />);
   const [onPresentAccountModal] = useModal(<AccountModal account={account || ""} logout={logout} />);
   const [onPresentNetworkModal] = useModal(<NetworkModal networks={networks} />);

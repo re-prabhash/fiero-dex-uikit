@@ -9,7 +9,7 @@ interface Props {
   walletConfig: NetworkConfig;
   onDismiss: () => void;
   mb: string;
-  disable:boolean
+  disable: boolean;
 }
 
 const NetworkCard: React.FC<Props> = ({ walletConfig, onDismiss, mb, disable }) => {
@@ -20,7 +20,7 @@ const NetworkCard: React.FC<Props> = ({ walletConfig, onDismiss, mb, disable }) 
       variant="tertiary"
       onClick={() => {
         window.localStorage.setItem(localStorageKey, "1");
-        window.open(walletConfig.href, "_blank")
+        window.open(walletConfig.href, "_blank");
         onDismiss();
       }}
       style={{ justifyContent: "space-between" }}

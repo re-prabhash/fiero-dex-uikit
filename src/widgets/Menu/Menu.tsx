@@ -74,7 +74,7 @@ const Menu: React.FC<NavProps> = ({
   children,
   socialsLinks,
   onlyMetaMask,
-  networks
+  networks,
 }) => {
   const { isXl } = useMatchBreakpoints();
   const isMobile = isXl === false;

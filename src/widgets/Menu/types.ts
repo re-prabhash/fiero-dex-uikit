@@ -50,12 +50,11 @@ export interface PanelProps {
   socialsLinks: Array<MenuEntry>;
 }
 
-
 export interface NavProps extends PanelProps {
   account?: string;
   login: Login;
   profile?: Profile;
   logout: () => void;
-  onlyMetaMask?:boolean,
-  networks?:Array<NetworkConfig>,
+  onlyMetaMask?: boolean;
+  networks?: Array<NetworkConfig>;
 }
