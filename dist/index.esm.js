@@ -2289,7 +2289,6 @@ var MenuLink = function (_a) {
     return React.createElement(Tag, __assign({}, props, otherProps));
 };
 
-var Icons = IconModule;
 var Container$3 = styled.div(templateObject_1$B || (templateObject_1$B = __makeTemplateObject(["\n  display: flex;\n  flex-direction: column;\n  overflow-y: auto;\n  overflow-x: hidden;\n  height: 100%;\n"], ["\n  display: flex;\n  flex-direction: column;\n  overflow-y: auto;\n  overflow-x: hidden;\n  height: 100%;\n"])));
 var PanelBody = function (_a) {
     var isPushed = _a.isPushed, pushNav = _a.pushNav, isMobile = _a.isMobile, links = _a.links;
@@ -2297,8 +2296,10 @@ var PanelBody = function (_a) {
     // Close the menu when a user clicks a link on mobile
     var handleClick = isMobile ? function () { return pushNav(false); } : undefined;
     return (React.createElement(Container$3, null, links.map(function (entry) {
-        var Icon = Icons[entry.icon];
-        var iconElement = React.createElement(Icon, { width: "24px", mr: "8px" });
+        // const Icon = Icons[entry.icon];
+        var Icon = entry.icon;
+        var iconElement = React.createElement(Icon, { style: { cursor: "pointer", color: "inherit", fontSize: 24, marginRight: 8 } });
+        // const iconElement = <Icon width="24px" mr="8px" />;
         var calloutClass = entry.calloutClass ? entry.calloutClass : undefined;
         if (entry.items) {
             return (React.createElement(Accordion, { key: entry.label, isPushed: isPushed, pushNav: pushNav, icon: iconElement, label: entry.label, initialOpenState: entry.initialOpenState, className: calloutClass }, isPushed &&
@@ -2313,8 +2314,8 @@ var PanelBody = function (_a) {
 };
 var templateObject_1$B;
 
-var Icons$1 = IconModule;
-var MoonIcon = Icons$1.MoonIcon, SunIcon = Icons$1.SunIcon, LanguageIcon = Icons$1.LanguageIcon;
+var Icons = IconModule;
+var MoonIcon = Icons.MoonIcon, SunIcon = Icons.SunIcon, LanguageIcon = Icons.LanguageIcon;
 var Container$4 = styled.div(templateObject_1$C || (templateObject_1$C = __makeTemplateObject(["\n  flex: none;\n  padding: 8px 4px;\n  background-color: ", ";\n  border-top: solid 2px rgba(133, 133, 133, 0.1);\n"], ["\n  flex: none;\n  padding: 8px 4px;\n  background-color: ", ";\n  border-top: solid 2px rgba(133, 133, 133, 0.1);\n"])), function (_a) {
     var theme = _a.theme;
     return theme.nav.background;
@@ -2343,17 +2344,16 @@ var PanelFooter = function (_a) {
                     React.createElement(Text, { color: "textSubtle" }, currentLang === null || currentLang === void 0 ? void 0 : currentLang.toUpperCase())) }, langs.map(function (lang) { return (React.createElement(MenuButton, { key: lang.code, fullWidth: true, onClick: function () { return setLang(lang); }, 
                 // Safari fix
                 style: { minHeight: "32px", height: "auto" } }, lang.language)); }))),
-        socialsLinks &&
-            React.createElement(SocialEntry, { style: { margin: "16px 0", display: "block" } },
-                React.createElement(Flex, { color: "textSubtle", style: { flexWrap: "wrap" } }, socialsLinks.map(function (social, index) {
-                    var Icon = social.icon;
-                    var mr = index < socialsLinks.length - 1 ? "8px" : 0;
-                    if (social.items) {
-                        return (React.createElement(Dropdown, { key: social.label, position: "top", target: React.createElement(Icon, { style: { cursor: "pointer", color: "inherit", fontSize: 24 } }) }, social.items.map(function (item) { return (React.createElement(Link, { external: true, key: item.label, href: item.href, "aria-label": item.label, color: "textSubtle" }, item.label)); })));
-                    }
-                    return (React.createElement(Link, { external: true, key: social.label, href: social.href, "aria-label": social.label, color: "textSubtle", mr: mr, mb: 10 },
-                        React.createElement(Icon, { style: { cursor: "pointer", color: "inherit", fontSize: 24 } })));
-                })))));
+        socialsLinks && (React.createElement(SocialEntry, { style: { margin: "16px 0", display: "block" } },
+            React.createElement(Flex, { color: "textSubtle", style: { flexWrap: "wrap" } }, socialsLinks.map(function (social, index) {
+                var Icon = social.icon;
+                var mr = index < socialsLinks.length - 1 ? "8px" : 0;
+                if (social.items) {
+                    return (React.createElement(Dropdown, { key: social.label, position: "top", target: React.createElement(Icon, { style: { cursor: "pointer", color: "inherit", fontSize: 24 } }) }, social.items.map(function (item) { return (React.createElement(Link, { external: true, key: item.label, href: item.href, "aria-label": item.label, color: "textSubtle" }, item.label)); })));
+                }
+                return (React.createElement(Link, { external: true, key: social.label, href: social.href, "aria-label": social.label, color: "textSubtle", mr: mr, mb: 10 },
+                    React.createElement(Icon, { style: { cursor: "pointer", color: "inherit", fontSize: 24 } })));
+            }))))));
 };
 var templateObject_1$C, templateObject_2$c, templateObject_3$7, templateObject_4$2;
 
@@ -2548,7 +2548,8 @@ var NetworkModal = function (_a) {
         }
     }, []);
     return (React.createElement(Modal, { title: "Select Network", onDismiss: onDismiss },
-        React.createElement(React.Fragment, null, networks && networks.map(function (entry, index) { return (React.createElement(NetworkCard, { key: entry.label, walletConfig: entry, onDismiss: onDismiss, disable: index > 0 ? false : true, mb: index < connectors.length - 1 ? "8px" : "0" })); }))));
+        React.createElement(React.Fragment, null, networks &&
+            networks.map(function (entry, index) { return (React.createElement(NetworkCard, { key: entry.label, walletConfig: entry, onDismiss: onDismiss, disable: index > 0 ? false : true, mb: index < connectors.length - 1 ? "8px" : "0" })); }))));
 };
 var templateObject_1$F;
 
@@ -2611,12 +2612,11 @@ var UserBlock = function (_a) {
     var _b = useWalletModal(login, logout, account, networks), onPresentConnectModal = _b.onPresentConnectModal, onPresentAccountModal = _b.onPresentAccountModal, onPresentNetworkModal = _b.onPresentNetworkModal;
     var accountEllipsis = account ? account.substring(0, 4) + "..." + account.substring(account.length - 4) : null;
     return (React.createElement("div", null,
-        networks &&
-            React.createElement(Button, { size: "sm", variant: "tertiary", onClick: function () {
-                    onPresentNetworkModal();
-                }, style: { marginRight: 15 } },
-                React.createElement("span", { style: { marginRight: 5, display: "inline-block" } }, "Network"),
-                React.createElement(Icon$1d, { name: networks[0].icon, size: 20 })),
+        networks && (React.createElement(Button, { size: "sm", variant: "tertiary", onClick: function () {
+                onPresentNetworkModal();
+            }, style: { marginRight: 15 } },
+            React.createElement("span", { style: { marginRight: 5, display: "inline-block" } }, "Network"),
+            React.createElement(Icon$1d, { name: networks[0].icon, size: 20 }))),
         account ? (React.createElement(Button, { size: "sm", variant: "tertiary", onClick: function () {
                 onPresentAccountModal();
             } }, accountEllipsis)) : (React.createElement(Button, { size: "sm", onClick: function () {
