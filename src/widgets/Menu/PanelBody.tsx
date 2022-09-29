@@ -33,7 +33,7 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
       {links.map((entry) => {
         // const Icon = Icons[entry.icon];
         const Icon: any = entry.icon;
-        const iconElement = <Icon style={{ cursor: "pointer", color: "inherit", fontSize: 24, marginRight:8 }} />;
+        const iconElement = <Icon style={{ cursor: "pointer", color: "inherit", fontSize: 24, marginRight: 8 }} />;
         // const iconElement = <Icon width="24px" mr="8px" />;
         const calloutClass = entry.calloutClass ? entry.calloutClass : undefined;
 
