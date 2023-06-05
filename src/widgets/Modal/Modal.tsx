@@ -16,9 +16,10 @@ interface Props extends InjectedProps {
 const StyledModal = styled.div`
   background: ${({ theme }) => theme.modal.background};
   box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);
-  border: 1px solid ${({ theme }) => theme.colors.borderColor};
-  border-radius: 32px;
+  // border: 1px solid ${({ theme }) => theme.colors.borderColor};
   width: 100%;
+  background: #150a0f;
+  border-radius: 15px;
   z-index: ${({ theme }) => theme.zIndices.modal};
   overflow-y: auto;
   ${({ theme }) => theme.mediaQueries.xs} {
@@ -31,9 +32,11 @@ const StyledModal = styled.div`
 const ModalHeader = styled.div`
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #e9eaeb;
+  // border-bottom: 1px solid #e9eaeb;
   align-items: center;
   padding: 12px 24px;
+  background: linear-gradient(92.79deg, #ffb000 -32.2%, #ff564d 5.51%, #ff0098 54.01%, #5d00c1 110.93%);
+  padding: 2px;
 `;
 
 const ModalTitle = styled(Flex)`
