@@ -65,11 +65,11 @@ const StyledButton = styled.button<ButtonProps>`
   justify-content: center;
   outline: 0;
   padding: ${({ size }) => (size === "sm" ? "0 16px" : "0 24px")};
-  transition: background 0.2s;
+  transition: background-color 0.2s;
   opacity: ${({ isLoading }) => (isLoading ? 0.5 : 1)};
 
   &:hover:not(:disabled):not(.button--disabled):not(:active) {
-    background: ${getButtonVariantProp("backgroundHover")};
+    background-color: ${getButtonVariantProp("backgroundHover")};
     border-color: ${getButtonVariantProp("borderColorHover")};
   }
 
@@ -78,7 +78,7 @@ const StyledButton = styled.button<ButtonProps>`
   }
 
   &:active {
-    background: ${getButtonVariantProp("backgroundActive")};
+    background-color: ${getButtonVariantProp("backgroundActive")};
     box-shadow: ${getButtonVariantProp("boxShadowActive")};
   }
 
