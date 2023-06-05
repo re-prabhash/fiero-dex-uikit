@@ -20,6 +20,7 @@ const StyledModal = styled.div`
   width: 100%;
   background: linear-gradient(92.79deg, #ffb000 -32.2%, #ff564d 5.51%, #ff0098 54.01%, #5d00c1 110.93%);
   padding: 2px;
+  border-radius: 15px;
   z-index: ${({ theme }) => theme.zIndices.modal};
   overflow-y: auto;
   ${({ theme }) => theme.mediaQueries.xs} {
