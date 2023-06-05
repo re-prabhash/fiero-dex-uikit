@@ -18,8 +18,8 @@ const StyledModal = styled.div`
   box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);
   // border: 1px solid ${({ theme }) => theme.colors.borderColor};
   width: 100%;
-  background: #150a0f;
-  border-radius: 15px;
+  background: linear-gradient(92.79deg, #ffb000 -32.2%, #ff564d 5.51%, #ff0098 54.01%, #5d00c1 110.93%);
+  padding: 2px;
   z-index: ${({ theme }) => theme.zIndices.modal};
   overflow-y: auto;
   ${({ theme }) => theme.mediaQueries.xs} {
@@ -29,14 +29,17 @@ const StyledModal = styled.div`
   }
 `;
 
+const StyledModalBG = styled.div`
+  background: #150a0f;
+  border-radius: 15px;
+`;
+
 const ModalHeader = styled.div`
   display: flex;
   align-items: center;
   // border-bottom: 1px solid #e9eaeb;
   align-items: center;
   padding: 12px 24px;
-  background: linear-gradient(92.79deg, #ffb000 -32.2%, #ff564d 5.51%, #ff0098 54.01%, #5d00c1 110.93%);
-  padding: 2px;
 `;
 
 const ModalTitle = styled(Flex)`
@@ -53,24 +56,26 @@ const Modal: React.FC<Props> = ({
   bodyPadding = "24px",
 }) => (
   <StyledModal>
-    <ModalHeader>
-      <ModalTitle>
-        {onBack && (
-          <IconButton variant="text" onClick={onBack} area-label="go back" mr="8px">
-            <ArrowBackIcon color="primary" />
+    <StyledModalBG>
+      <ModalHeader>
+        <ModalTitle>
+          {onBack && (
+            <IconButton variant="text" onClick={onBack} area-label="go back" mr="8px">
+              <ArrowBackIcon color="primary" />
+            </IconButton>
+          )}
+          <Heading>{title}</Heading>
+        </ModalTitle>
+        {!hideCloseButton && (
+          <IconButton variant="text" onClick={onDismiss} aria-label="Close the dialog">
+            <CloseIcon color="primary" />
           </IconButton>
         )}
-        <Heading>{title}</Heading>
-      </ModalTitle>
-      {!hideCloseButton && (
-        <IconButton variant="text" onClick={onDismiss} aria-label="Close the dialog">
-          <CloseIcon color="primary" />
-        </IconButton>
-      )}
-    </ModalHeader>
-    <Flex flexDirection="column" p={bodyPadding}>
-      {children}
-    </Flex>
+      </ModalHeader>
+      <Flex flexDirection="column" p={bodyPadding}>
+        {children}
+      </Flex>
+    </StyledModalBG>
   </StyledModal>
 );
 
