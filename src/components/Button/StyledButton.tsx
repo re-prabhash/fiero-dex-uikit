@@ -47,7 +47,7 @@ const getButtonVariantProp = (prop: keyof ButtonThemeVariant) => ({
 
 const StyledButton = styled.button<ButtonProps>`
   align-items: center;
-  background-color: ${getButtonVariantProp("background")};
+  background: linear-gradient(92.79deg, #ffb000 -32.2%, #ff564d 5.51%, #ff0098 54.01%, #5d00c1 110.93%);
   border: ${getButtonVariantProp("border")};
   border-radius: 16px;
   box-shadow: ${getButtonVariantProp("boxShadow")};
@@ -65,11 +65,11 @@ const StyledButton = styled.button<ButtonProps>`
   justify-content: center;
   outline: 0;
   padding: ${({ size }) => (size === "sm" ? "0 16px" : "0 24px")};
-  transition: background-color 0.2s;
+  transition: background 0.2s;
   opacity: ${({ isLoading }) => (isLoading ? 0.5 : 1)};
 
   &:hover:not(:disabled):not(.button--disabled):not(:active) {
-    background-color: ${getButtonVariantProp("backgroundHover")};
+    background: ${getButtonVariantProp("backgroundHover")};
     border-color: ${getButtonVariantProp("borderColorHover")};
   }
 
@@ -78,7 +78,7 @@ const StyledButton = styled.button<ButtonProps>`
   }
 
   &:active {
-    background-color: ${getButtonVariantProp("backgroundActive")};
+    background: ${getButtonVariantProp("backgroundActive")};
     box-shadow: ${getButtonVariantProp("boxShadowActive")};
   }
 
