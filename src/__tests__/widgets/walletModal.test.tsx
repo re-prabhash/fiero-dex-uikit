@@ -48,8 +48,8 @@ it("renders ConnectModal correctly", () => {
           <button
             class="sc-jSgupP jdAMRQ"
             id="wallet-connect-metamask"
-            style="justify-content: space-between;"
-            type="button"
+            style="justify-content: space-between;background:#000 !important"
+            type="button" 
           >
             <div
               class="sc-bdfBwQ OmpVE"
