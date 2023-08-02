@@ -18,7 +18,6 @@ const StyledModal = styled.div`
   box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);
   // border: 1px solid ${({ theme }) => theme.colors.borderColor};
   width: 100%;
-  background: linear-gradient(92.79deg, #ffb000 -32.2%, #ff564d 5.51%, #ff0098 54.01%, #5d00c1 110.93%);
   padding: 2px;
   border-radius: 15px;
   z-index: ${({ theme }) => theme.zIndices.modal};
