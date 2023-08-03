@@ -839,7 +839,7 @@ var sizes$1 = {
 var _a;
 var style = (_a = {},
     _a[sizes$1.MD] = {
-        fontSize: "20px",
+        fontSize: "18px",
     },
     _a[sizes$1.LG] = {
         fontSize: "24px",
@@ -851,7 +851,7 @@ var style = (_a = {},
         fontSize: "64px",
     },
     _a);
-var Heading = styled__default['default'](Text).attrs({ bold: true })(templateObject_1$g || (templateObject_1$g = __makeTemplateObject(["\n  ", "\n  font-weight:600;\n  line-height: 1.1;\n"], ["\n  ", "\n  font-weight:600;\n  line-height: 1.1;\n"])), function (_a) {
+var Heading = styled__default['default'](Text).attrs({ bold: true })(templateObject_1$g || (templateObject_1$g = __makeTemplateObject(["\n  ", "\n  font-weight:500;\n  line-height: 1.1;\n"], ["\n  ", "\n  font-weight:500;\n  line-height: 1.1;\n"])), function (_a) {
     var size = _a.size;
     return style[size || sizes$1.MD];
 });
@@ -1752,7 +1752,7 @@ var StyledModal = styled__default['default'].div(templateObject_1$u || (template
     return theme.mediaQueries.xs;
 });
 var StyledModalBG = styled__default['default'].div(templateObject_2$9 || (templateObject_2$9 = __makeTemplateObject(["\n  background: #141718;\n  border-radius: 10px !important;\n  padding: 15px !important;\n  position: relative;\n"], ["\n  background: #141718;\n  border-radius: 10px !important;\n  padding: 15px !important;\n  position: relative;\n"])));
-var ModalHeader = styled__default['default'].div(templateObject_3$5 || (templateObject_3$5 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  // border-bottom: 1px solid #e9eaeb;\n  align-items: center;\n  margin-bottom: 10px;\n  border-bottom: 1px solid #272727;\n"], ["\n  display: flex;\n  align-items: center;\n  // border-bottom: 1px solid #e9eaeb;\n  align-items: center;\n  margin-bottom: 10px;\n  border-bottom: 1px solid #272727;\n"])));
+var ModalHeader = styled__default['default'].div(templateObject_3$5 || (templateObject_3$5 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  // border-bottom: 1px solid #e9eaeb;\n  align-items: center;\n  margin-bottom: 10px;\n  border-bottom: 1px solid #272727;\n      padding-bottom: 15px;\n"], ["\n  display: flex;\n  align-items: center;\n  // border-bottom: 1px solid #e9eaeb;\n  align-items: center;\n  margin-bottom: 10px;\n  border-bottom: 1px solid #272727;\n      padding-bottom: 15px;\n"])));
 var ModalTitle = styled__default['default'](Flex)(templateObject_4$2 || (templateObject_4$2 = __makeTemplateObject(["\n  align-items: center;\n  flex: 1;\n"], ["\n  align-items: center;\n  flex: 1;\n"])));
 var Modal = function (_a) {
     var title = _a.title, onDismiss = _a.onDismiss, onBack = _a.onBack, children = _a.children, _b = _a.hideCloseButton, hideCloseButton = _b === void 0 ? false : _b;
