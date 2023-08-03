@@ -1737,11 +1737,11 @@ var StyledModal = styled.div(templateObject_1$u || (templateObject_1$u = __makeT
     var theme = _a.theme;
     return theme.mediaQueries.xs;
 });
-var StyledModalBG = styled.div(templateObject_2$9 || (templateObject_2$9 = __makeTemplateObject(["\n  background: #141718;\n  border-radius: 10px !important;\n"], ["\n  background: #141718;\n  border-radius: 10px !important;\n"])));
-var ModalHeader = styled.div(templateObject_3$5 || (templateObject_3$5 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  // border-bottom: 1px solid #e9eaeb;\n  align-items: center;\n  padding: 12px 24px;\n"], ["\n  display: flex;\n  align-items: center;\n  // border-bottom: 1px solid #e9eaeb;\n  align-items: center;\n  padding: 12px 24px;\n"])));
+var StyledModalBG = styled.div(templateObject_2$9 || (templateObject_2$9 = __makeTemplateObject(["\n  background: #141718;\n  border-radius: 10px !important;\n  padding: 15px !important;\n"], ["\n  background: #141718;\n  border-radius: 10px !important;\n  padding: 15px !important;\n"])));
+var ModalHeader = styled.div(templateObject_3$5 || (templateObject_3$5 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  // border-bottom: 1px solid #e9eaeb;\n  align-items: center;\n"], ["\n  display: flex;\n  align-items: center;\n  // border-bottom: 1px solid #e9eaeb;\n  align-items: center;\n"])));
 var ModalTitle = styled(Flex)(templateObject_4$2 || (templateObject_4$2 = __makeTemplateObject(["\n  align-items: center;\n  flex: 1;\n"], ["\n  align-items: center;\n  flex: 1;\n"])));
 var Modal = function (_a) {
-    var title = _a.title, onDismiss = _a.onDismiss, onBack = _a.onBack, children = _a.children, _b = _a.hideCloseButton, hideCloseButton = _b === void 0 ? false : _b, _c = _a.bodyPadding, bodyPadding = _c === void 0 ? "24px" : _c;
+    var title = _a.title, onDismiss = _a.onDismiss, onBack = _a.onBack, children = _a.children, _b = _a.hideCloseButton, hideCloseButton = _b === void 0 ? false : _b;
     return (React.createElement(StyledModal, null,
         React.createElement(StyledModalBG, null,
             React.createElement(ModalHeader, null,
@@ -1751,7 +1751,7 @@ var Modal = function (_a) {
                     React.createElement(Heading, null, title)),
                 !hideCloseButton && (React.createElement(IconButton, { variant: "text", onClick: onDismiss, "aria-label": "Close the dialog" },
                     React.createElement(Icon$k, { color: "primary" })))),
-            React.createElement(Flex, { flexDirection: "column", p: bodyPadding }, children))));
+            React.createElement(Flex, { flexDirection: "column" }, children))));
 };
 var templateObject_1$u, templateObject_2$9, templateObject_3$5, templateObject_4$2;
 
@@ -2613,7 +2613,7 @@ var UserBlock = function (_a) {
             React.createElement(Icon$1d, { name: networks[0].icon, size: 20 }))),
         account ? (React.createElement(Button, { size: "sm", variant: "tertiary", onClick: function () {
                 onPresentAccountModal();
-            } }, accountEllipsis)) : (React.createElement(Button, { size: "sm", onClick: function () {
+            } }, accountEllipsis)) : (React.createElement(Button, { style: { marginRight: 5, display: "inline-block" }, size: "sm", onClick: function () {
                 onPresentConnectModal();
             } }, "Connect"))));
 };

@@ -30,6 +30,7 @@ const StyledModal = styled.div`
 const StyledModalBG = styled.div`
   background: #141718;
   border-radius: 10px !important;
+  padding: 15px !important;
 `;
 
 const ModalHeader = styled.div`
@@ -37,7 +38,6 @@ const ModalHeader = styled.div`
   align-items: center;
   // border-bottom: 1px solid #e9eaeb;
   align-items: center;
-  padding: 12px 24px;
 `;
 
 const ModalTitle = styled(Flex)`
@@ -45,14 +45,7 @@ const ModalTitle = styled(Flex)`
   flex: 1;
 `;
 
-const Modal: React.FC<Props> = ({
-  title,
-  onDismiss,
-  onBack,
-  children,
-  hideCloseButton = false,
-  bodyPadding = "24px",
-}) => (
+const Modal: React.FC<Props> = ({ title, onDismiss, onBack, children, hideCloseButton = false }) => (
   <StyledModal>
     <StyledModalBG>
       <ModalHeader>
@@ -70,9 +63,7 @@ const Modal: React.FC<Props> = ({
           </IconButton>
         )}
       </ModalHeader>
-      <Flex flexDirection="column" p={bodyPadding}>
-        {children}
-      </Flex>
+      <Flex flexDirection="column">{children}</Flex>
     </StyledModalBG>
   </StyledModal>
 );

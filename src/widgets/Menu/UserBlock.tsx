@@ -46,6 +46,7 @@ const UserBlock: React.FC<Props> = ({ account, login, logout, networks }) => {
         </Button>
       ) : (
         <Button
+          style={{ marginRight: 5, display: "inline-block" }}
           size="sm"
           onClick={() => {
             onPresentConnectModal();
