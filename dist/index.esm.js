@@ -2621,7 +2621,7 @@ var UserBlock = function (_a) {
                 onPresentAccountModal();
             } }, accountEllipsis)) : (React.createElement(Button, { size: "sm", onClick: function () {
                 onPresentConnectModal();
-            } }, "Connect"))));
+            } }, "Connect Wallet"))));
 };
 
 var Icon$1c = function (props) {
