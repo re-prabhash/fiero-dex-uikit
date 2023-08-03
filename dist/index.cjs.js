@@ -1763,7 +1763,7 @@ var Modal = function (_a) {
                     onBack && (React__default['default'].createElement(IconButton, { variant: "text", onClick: onBack, "area-label": "go back", mr: "8px" },
                         React__default['default'].createElement(Icon$5, { color: "primary" }))),
                     React__default['default'].createElement(Heading, null, title)),
-                !hideCloseButton && (React__default['default'].createElement(IconButton, { variant: "text", onClick: onDismiss, "aria-label": "Close the dialog" },
+                !hideCloseButton && (React__default['default'].createElement(IconButton, { variant: "text", onClick: onDismiss, "aria-label": "Close the dialog", style: { background: "transparent", border: "none" } },
                     React__default['default'].createElement(Icon$k, { color: "primary" })))),
             React__default['default'].createElement(Flex, { flexDirection: "column" }, children))));
 };

@@ -1749,7 +1749,7 @@ var Modal = function (_a) {
                     onBack && (React.createElement(IconButton, { variant: "text", onClick: onBack, "area-label": "go back", mr: "8px" },
                         React.createElement(Icon$5, { color: "primary" }))),
                     React.createElement(Heading, null, title)),
-                !hideCloseButton && (React.createElement(IconButton, { variant: "text", onClick: onDismiss, "aria-label": "Close the dialog" },
+                !hideCloseButton && (React.createElement(IconButton, { variant: "text", onClick: onDismiss, "aria-label": "Close the dialog", style: { background: "transparent", border: "none" } },
                     React.createElement(Icon$k, { color: "primary" })))),
             React.createElement(Flex, { flexDirection: "column" }, children))));
 };
