@@ -20,6 +20,7 @@ const StyledModal = styled.div`
   padding: 2px;
   z-index: ${({ theme }) => theme.zIndices.modal};
   overflow-y: auto;
+
   ${({ theme }) => theme.mediaQueries.xs} {
     width: auto;
     min-width: 360px;
@@ -31,6 +32,7 @@ const StyledModalBG = styled.div`
   background: #141718;
   border-radius: 10px !important;
   padding: 15px !important;
+  position: relative;
 `;
 
 const ModalHeader = styled.div`
@@ -38,6 +40,8 @@ const ModalHeader = styled.div`
   align-items: center;
   // border-bottom: 1px solid #e9eaeb;
   align-items: center;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #272727;
 `;
 
 const ModalTitle = styled(Flex)`
@@ -62,7 +66,7 @@ const Modal: React.FC<Props> = ({ title, onDismiss, onBack, children, hideCloseB
             variant="text"
             onClick={onDismiss}
             aria-label="Close the dialog"
-            style={{ background: "transparent", border: "none" }}
+            style={{ background: "transparent", border: "none", position: "absolute", right: "0", top: "0" }}
           >
             <CloseIcon color="primary" />
           </IconButton>

@@ -1744,15 +1744,15 @@ var useParticleBurst = function (options) {
     return { initialize: initialize, teardown: teardown };
 };
 
-var StyledModal = styled__default['default'].div(templateObject_1$u || (templateObject_1$u = __makeTemplateObject(["\n  background: #141718;\n  border-radius: 10px !important;\n  width: 100%;\n  padding: 2px;\n  z-index: ", ";\n  overflow-y: auto;\n  ", " {\n    width: auto;\n    min-width: 360px;\n    max-width: 100%;\n  }\n"], ["\n  background: #141718;\n  border-radius: 10px !important;\n  width: 100%;\n  padding: 2px;\n  z-index: ", ";\n  overflow-y: auto;\n  ", " {\n    width: auto;\n    min-width: 360px;\n    max-width: 100%;\n  }\n"])), function (_a) {
+var StyledModal = styled__default['default'].div(templateObject_1$u || (templateObject_1$u = __makeTemplateObject(["\n  background: #141718;\n  border-radius: 10px !important;\n  width: 100%;\n  padding: 2px;\n  z-index: ", ";\n  overflow-y: auto;\n\n  ", " {\n    width: auto;\n    min-width: 360px;\n    max-width: 100%;\n  }\n"], ["\n  background: #141718;\n  border-radius: 10px !important;\n  width: 100%;\n  padding: 2px;\n  z-index: ", ";\n  overflow-y: auto;\n\n  ", " {\n    width: auto;\n    min-width: 360px;\n    max-width: 100%;\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.zIndices.modal;
 }, function (_a) {
     var theme = _a.theme;
     return theme.mediaQueries.xs;
 });
-var StyledModalBG = styled__default['default'].div(templateObject_2$9 || (templateObject_2$9 = __makeTemplateObject(["\n  background: #141718;\n  border-radius: 10px !important;\n  padding: 15px !important;\n"], ["\n  background: #141718;\n  border-radius: 10px !important;\n  padding: 15px !important;\n"])));
-var ModalHeader = styled__default['default'].div(templateObject_3$5 || (templateObject_3$5 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  // border-bottom: 1px solid #e9eaeb;\n  align-items: center;\n"], ["\n  display: flex;\n  align-items: center;\n  // border-bottom: 1px solid #e9eaeb;\n  align-items: center;\n"])));
+var StyledModalBG = styled__default['default'].div(templateObject_2$9 || (templateObject_2$9 = __makeTemplateObject(["\n  background: #141718;\n  border-radius: 10px !important;\n  padding: 15px !important;\n  position: relative;\n"], ["\n  background: #141718;\n  border-radius: 10px !important;\n  padding: 15px !important;\n  position: relative;\n"])));
+var ModalHeader = styled__default['default'].div(templateObject_3$5 || (templateObject_3$5 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  // border-bottom: 1px solid #e9eaeb;\n  align-items: center;\n  margin-bottom: 10px;\n  border-bottom: 1px solid #272727;\n"], ["\n  display: flex;\n  align-items: center;\n  // border-bottom: 1px solid #e9eaeb;\n  align-items: center;\n  margin-bottom: 10px;\n  border-bottom: 1px solid #272727;\n"])));
 var ModalTitle = styled__default['default'](Flex)(templateObject_4$2 || (templateObject_4$2 = __makeTemplateObject(["\n  align-items: center;\n  flex: 1;\n"], ["\n  align-items: center;\n  flex: 1;\n"])));
 var Modal = function (_a) {
     var title = _a.title, onDismiss = _a.onDismiss, onBack = _a.onBack, children = _a.children, _b = _a.hideCloseButton, hideCloseButton = _b === void 0 ? false : _b;
@@ -1763,7 +1763,7 @@ var Modal = function (_a) {
                     onBack && (React__default['default'].createElement(IconButton, { variant: "text", onClick: onBack, "area-label": "go back", mr: "8px" },
                         React__default['default'].createElement(Icon$5, { color: "primary" }))),
                     React__default['default'].createElement(Heading, null, title)),
-                !hideCloseButton && (React__default['default'].createElement(IconButton, { variant: "text", onClick: onDismiss, "aria-label": "Close the dialog", style: { background: "transparent", border: "none" } },
+                !hideCloseButton && (React__default['default'].createElement(IconButton, { variant: "text", onClick: onDismiss, "aria-label": "Close the dialog", style: { background: "transparent", border: "none", position: "absolute", right: "0", top: "0" } },
                     React__default['default'].createElement(Icon$k, { color: "primary" })))),
             React__default['default'].createElement(Flex, { flexDirection: "column" }, children))));
 };
