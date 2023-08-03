@@ -31,6 +31,11 @@ it("renders correctly", () => {
             aria-label="Close the dialog"
             class="sc-eCssSg dHcAeg sc-jSgupP gPZlLR"
             type="button"
+            style={{  "background": "transparent",
+  "border": "none",
+  "width": "0px",
+  "narginT": "-8px",
+  "marginTop": "-10px"}}
           >
             <svg
               class="sc-hKgILt SJlke"

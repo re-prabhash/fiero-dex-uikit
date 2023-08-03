@@ -14,12 +14,10 @@ interface Props extends InjectedProps {
 }
 
 const StyledModal = styled.div`
-  background: ${({ theme }) => theme.modal.background};
-  box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);
-  // border: 1px solid ${({ theme }) => theme.colors.borderColor};
+  background: #141718;
+  border-radius: 10px !important;
   width: 100%;
   padding: 2px;
-  border-radius: 15px;
   z-index: ${({ theme }) => theme.zIndices.modal};
   overflow-y: auto;
   ${({ theme }) => theme.mediaQueries.xs} {
@@ -30,8 +28,8 @@ const StyledModal = styled.div`
 `;
 
 const StyledModalBG = styled.div`
-  background: #150a0f;
-  border-radius: 15px;
+  background: #141718;
+  border-radius: 10px !important;
 `;
 
 const ModalHeader = styled.div`
