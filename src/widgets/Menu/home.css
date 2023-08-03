@@ -1,0 +1,24 @@
+.gamebuttonBox {
+  outline: none;
+  border: 2px solid #ea9f28 !important;
+  border-radius: 2rem;
+  background-color: hsl(0deg 0% 3.92% / 74%) !important;
+  color: #fff !important;
+  font-family: "Readex Pro", sans-serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 1.3rem;
+  min-width: 150px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  font-size: 1.1rem;
+  line-height: 1.1rem;
+  min-width: 125px;
+  padding: 0.5rem 1rem;
+  white-space: pre !important;
+  width: 124px !important;
+  height: 124px !important;
+  border-radius: 100px !important;
+  padding: 20px !important;
+}
