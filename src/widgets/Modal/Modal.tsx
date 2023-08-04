@@ -23,7 +23,7 @@ const StyledModal = styled.div`
 
   ${({ theme }) => theme.mediaQueries.xs} {
     width: auto;
-    min-width: 450px;
+    min-width: 350px;
     max-width: 100%;
   }
 `;
