@@ -21,6 +21,12 @@ const StyledModal = styled.div`
   z-index: ${({ theme }) => theme.zIndices.modal};
   overflow-y: auto;
 
+  ${({ theme }) => theme.mediaQueries.lg} {
+    width: auto;
+    min-width: 450px;
+    max-width: 100%;
+  }
+  
   ${({ theme }) => theme.mediaQueries.xs} {
     width: auto;
     min-width: 350px;

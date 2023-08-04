@@ -1744,9 +1744,12 @@ var useParticleBurst = function (options) {
     return { initialize: initialize, teardown: teardown };
 };
 
-var StyledModal = styled__default['default'].div(templateObject_1$u || (templateObject_1$u = __makeTemplateObject(["\n  background: #141718;\n  border-radius: 10px !important;\n  width: 100%;\n  padding: 2px;\n  z-index: ", ";\n  overflow-y: auto;\n\n  ", " {\n    width: auto;\n    min-width: 350px;\n    max-width: 100%;\n  }\n"], ["\n  background: #141718;\n  border-radius: 10px !important;\n  width: 100%;\n  padding: 2px;\n  z-index: ", ";\n  overflow-y: auto;\n\n  ", " {\n    width: auto;\n    min-width: 350px;\n    max-width: 100%;\n  }\n"])), function (_a) {
+var StyledModal = styled__default['default'].div(templateObject_1$u || (templateObject_1$u = __makeTemplateObject(["\n  background: #141718;\n  border-radius: 10px !important;\n  width: 100%;\n  padding: 2px;\n  z-index: ", ";\n  overflow-y: auto;\n\n  ", " {\n    width: auto;\n    min-width: 450px;\n    max-width: 100%;\n  }\n  \n  ", " {\n    width: auto;\n    min-width: 350px;\n    max-width: 100%;\n  }\n"], ["\n  background: #141718;\n  border-radius: 10px !important;\n  width: 100%;\n  padding: 2px;\n  z-index: ", ";\n  overflow-y: auto;\n\n  ", " {\n    width: auto;\n    min-width: 450px;\n    max-width: 100%;\n  }\n  \n  ", " {\n    width: auto;\n    min-width: 350px;\n    max-width: 100%;\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.zIndices.modal;
+}, function (_a) {
+    var theme = _a.theme;
+    return theme.mediaQueries.lg;
 }, function (_a) {
     var theme = _a.theme;
     return theme.mediaQueries.xs;
@@ -2515,18 +2518,16 @@ var WalletCard = function (_a) {
             window.localStorage.setItem(localStorageKey, "1");
             onDismiss();
         }, style: {
-            "justifyContent": "space-between",
-            "background": "transparent",
-            "border": "1px solid rgba(255, 255, 255, 0.1)",
-            "display": "block",
-            "height": "144px",
-            "margin": "20px 0 13px",
-            "borderRadius": "550px"
+            justifyContent: "space-between",
+            background: "transparent",
+            border: "1px solid rgba(255, 255, 255, 0.1)",
+            display: "block",
+            height: "144px",
+            margin: "20px 0 13px",
+            borderRadius: "550px",
         }, mb: mb, id: "wallet-connect-" + title.toLocaleLowerCase() },
         " ",
-        React__default['default'].createElement("img", { src: "images/metamask.png", style: { "width": "auto",
-                "maxWidth": "49px",
-                "margin": "8px 0 20px" } }),
+        React__default['default'].createElement("img", { src: "images/metamask.png", style: { width: "auto", maxWidth: "49px", margin: "8px 0 20px" } }),
         React__default['default'].createElement(Text, { bold: true, color: "primary" }, title)));
 };
 

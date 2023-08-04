@@ -23,22 +23,20 @@ const WalletCard: React.FC<Props> = ({ login, walletConfig, onDismiss, mb }) => 
         onDismiss();
       }}
       style={{
-  "justifyContent": "space-between",
-  "background": "transparent",
-  "border": "1px solid rgba(255, 255, 255, 0.1)",
-  "display": "block",
-  "height": "144px",
-  "margin": "20px 0 13px",
-  "borderRadius": "550px"
+        justifyContent: "space-between",
+        background: "transparent",
+        border: "1px solid rgba(255, 255, 255, 0.1)",
+        display: "block",
+        height: "144px",
+        margin: "20px 0 13px",
+        borderRadius: "550px",
       }}
       mb={mb}
       id={`wallet-connect-${title.toLocaleLowerCase()}`}
     >
       {" "}
       {/* <Icon width="32px" /> */}
-      <img src="images/metamask.png" style={{  "width": "auto",
-  "maxWidth": "49px",
-  "margin": "8px 0 20px"}}/>
+      <img src="images/metamask.png" style={{ width: "auto", maxWidth: "49px", margin: "8px 0 20px" }} />
       <Text bold color="primary">
         {title}
       </Text>
