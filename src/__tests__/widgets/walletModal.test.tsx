@@ -43,15 +43,20 @@ it("renders ConnectModal correctly", () => {
           </div>
         </div>
         <div
-       style="text-align:center"
+          class="sc-eCssSg gIvwGY"
         >
           <button
-           
+            class="sc-jSgupP jdAMRQ"
             id="wallet-connect-metamask"
-            style="justify-content: space-between; height:11px; background:#000 !important;"
+            style="justify-content: space-between;background:#000 !important;"
             type="button" 
           >
-       
+            <div
+              class="sc-bdfBwQ OmpVE"
+              color="primary"
+            >
+              Metamask
+            </div>
             <svg
               class="sc-dlfnbm cqTLJf"
               color="text"
@@ -182,13 +187,6 @@ it("renders ConnectModal correctly", () => {
                 fill="#F5841F"
               />
             </svg>
-
-                 <div
-              class="sc-bdfBwQ OmpVE"
-              color="primary"
-            >
-              Metamask
-            </div>
           </button>
           <button
             class="sc-jSgupP jdAMRQ"

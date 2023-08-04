@@ -2529,7 +2529,8 @@ var ConnectModal = function (_a) {
             setOnlyMetaMask(true);
         }
     }, []);
-    return (React__default['default'].createElement(Modal, { title: "Connect to a wallet", onDismiss: onDismiss }, onlyMetaMask ? (React__default['default'].createElement(WalletCard, { key: connectors[0].title, login: login, walletConfig: connectors[0], onDismiss: onDismiss, mb: "0" })) : (React__default['default'].createElement(React__default['default'].Fragment, null, connectors.map(function (entry, index) { return (React__default['default'].createElement(WalletCard, { key: entry.title, login: login, walletConfig: entry, onDismiss: onDismiss, mb: index < connectors.length - 1 ? "8px" : "0" })); })))));
+    return (React__default['default'].createElement(Modal, { title: "Connect to a wallet 123", onDismiss: onDismiss }, onlyMetaMask ? (React__default['default'].createElement(WalletCard, { key: connectors[0].title, login: login, walletConfig: connectors[0], onDismiss: onDismiss, mb: "0" })) : (React__default['default'].createElement(React__default['default'].Fragment, null,
+        React__default['default'].createElement("p", null, "Metamask")))));
 };
 var templateObject_1$E;
 

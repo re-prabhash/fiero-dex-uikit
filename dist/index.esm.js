@@ -2515,7 +2515,8 @@ var ConnectModal = function (_a) {
             setOnlyMetaMask(true);
         }
     }, []);
-    return (React.createElement(Modal, { title: "Connect to a wallet", onDismiss: onDismiss }, onlyMetaMask ? (React.createElement(WalletCard, { key: connectors[0].title, login: login, walletConfig: connectors[0], onDismiss: onDismiss, mb: "0" })) : (React.createElement(React.Fragment, null, connectors.map(function (entry, index) { return (React.createElement(WalletCard, { key: entry.title, login: login, walletConfig: entry, onDismiss: onDismiss, mb: index < connectors.length - 1 ? "8px" : "0" })); })))));
+    return (React.createElement(Modal, { title: "Connect to a wallet 123", onDismiss: onDismiss }, onlyMetaMask ? (React.createElement(WalletCard, { key: connectors[0].title, login: login, walletConfig: connectors[0], onDismiss: onDismiss, mb: "0" })) : (React.createElement(React.Fragment, null,
+        React.createElement("p", null, "Metamask")))));
 };
 var templateObject_1$E;
 
