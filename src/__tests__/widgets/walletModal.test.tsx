@@ -21,7 +21,7 @@ it("renders ConnectModal correctly", () => {
               class="sc-bdfBwQ sc-hKgILt iEFWFe ESJmc"
               color="text"
             >
-              Connect to a wallet
+              Connect to a wallet2222
             </h2>
           </div>
           <div
@@ -55,7 +55,7 @@ it("renders ConnectModal correctly", () => {
               class="sc-bdfBwQ OmpVE"
               color="primary"
             >
-              Metamask
+              Metamask09C
             </div>
             <svg
               class="sc-dlfnbm cqTLJf"

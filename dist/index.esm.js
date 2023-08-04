@@ -2582,7 +2582,8 @@ var templateObject_1$G, templateObject_2$d;
 var AccountModal = function (_a) {
     var account = _a.account, logout = _a.logout, _b = _a.onDismiss, onDismiss = _b === void 0 ? function () { return null; } : _b;
     return (React.createElement(Modal, { title: "Your wallet1333", onDismiss: onDismiss },
-        React.createElement(Text, { fontSize: "20px", bold: true, style: { whiteSpace: "nowrap",
+        React.createElement(Text, { fontSize: "20px", bold: true, style: {
+                whiteSpace: "nowrap",
                 overflow: "hidden",
                 textOverflow: "ellipsis",
                 marginBottom: "8px",
@@ -2591,9 +2592,11 @@ var AccountModal = function (_a) {
         React.createElement(Flex, { mb: "11px" },
             React.createElement(CopyToClipboard, { toCopy: account }, "Copy Address")),
         React.createElement(Flex, { justifyContent: "center" },
-            React.createElement(Button, { style: { "border": "0.863px solid rgba(255, 255, 255, 0.10)",
-                    "background": "rgba(255, 255, 255, 0.03)",
-                    "color": "#fff" }, size: "sm", variant: "secondary", onClick: function () {
+            React.createElement(Button, { style: {
+                    border: "0.863px solid rgba(255, 255, 255, 0.10)",
+                    background: "rgba(255, 255, 255, 0.03)",
+                    color: "#fff",
+                }, size: "sm", variant: "secondary", onClick: function () {
                     logout();
                     window.localStorage.removeItem(localStorageKey);
                     onDismiss();
