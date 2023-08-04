@@ -126,7 +126,7 @@ var getFontSize = function (_a) {
 };
 var Text = styled__default['default'].div(templateObject_1$1 || (templateObject_1$1 = __makeTemplateObject(["\n  color: ", ";\n  font-size: ", ";\n  font-weight: ", ";\n  line-height: 1.5;\n  ", "\n  ", "\n"], ["\n  color: ", ";\n  font-size: ", ";\n  font-weight: ", ";\n  line-height: 1.5;\n  ", "\n  ", "\n"])), getColor, getFontSize, function (_a) {
     var bold = _a.bold;
-    return (bold ? 600 : 400);
+    return (bold ? 500 : 400);
 }, function (_a) {
     var textTransform = _a.textTransform;
     return textTransform && "text-transform: " + textTransform + ";";
@@ -1744,7 +1744,7 @@ var useParticleBurst = function (options) {
     return { initialize: initialize, teardown: teardown };
 };
 
-var StyledModal = styled__default['default'].div(templateObject_1$u || (templateObject_1$u = __makeTemplateObject(["\n  background: #141718;\n  border-radius: 10px !important;\n  width: 100%;\n  padding: 2px;\n  z-index: ", ";\n  overflow-y: auto;\n\n  ", " {\n    width: auto;\n    min-width: 360px;\n    max-width: 100%;\n  }\n"], ["\n  background: #141718;\n  border-radius: 10px !important;\n  width: 100%;\n  padding: 2px;\n  z-index: ", ";\n  overflow-y: auto;\n\n  ", " {\n    width: auto;\n    min-width: 360px;\n    max-width: 100%;\n  }\n"])), function (_a) {
+var StyledModal = styled__default['default'].div(templateObject_1$u || (templateObject_1$u = __makeTemplateObject(["\n  background: #141718;\n  border-radius: 10px !important;\n  width: 100%;\n  padding: 2px;\n  z-index: ", ";\n  overflow-y: auto;\n\n  ", " {\n    width: auto;\n    min-width: 450px;\n    max-width: 100%;\n  }\n"], ["\n  background: #141718;\n  border-radius: 10px !important;\n  width: 100%;\n  padding: 2px;\n  z-index: ", ";\n  overflow-y: auto;\n\n  ", " {\n    width: auto;\n    min-width: 450px;\n    max-width: 100%;\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.zIndices.modal;
 }, function (_a) {
@@ -1752,7 +1752,7 @@ var StyledModal = styled__default['default'].div(templateObject_1$u || (template
     return theme.mediaQueries.xs;
 });
 var StyledModalBG = styled__default['default'].div(templateObject_2$9 || (templateObject_2$9 = __makeTemplateObject(["\n  background: #141718;\n  border-radius: 10px !important;\n  padding: 15px !important;\n  position: relative;\n"], ["\n  background: #141718;\n  border-radius: 10px !important;\n  padding: 15px !important;\n  position: relative;\n"])));
-var ModalHeader = styled__default['default'].div(templateObject_3$5 || (templateObject_3$5 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  // border-bottom: 1px solid #e9eaeb;\n  align-items: center;\n  margin-bottom: 10px;\n  border-bottom: 1px solid #272727;\n      padding-bottom: 15px;\n"], ["\n  display: flex;\n  align-items: center;\n  // border-bottom: 1px solid #e9eaeb;\n  align-items: center;\n  margin-bottom: 10px;\n  border-bottom: 1px solid #272727;\n      padding-bottom: 15px;\n"])));
+var ModalHeader = styled__default['default'].div(templateObject_3$5 || (templateObject_3$5 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  // border-bottom: 1px solid #e9eaeb;\n  align-items: center;\n  margin-bottom: 10px;\n  border-bottom: 1px solid #272727;\n  padding-bottom: 15px;\n"], ["\n  display: flex;\n  align-items: center;\n  // border-bottom: 1px solid #e9eaeb;\n  align-items: center;\n  margin-bottom: 10px;\n  border-bottom: 1px solid #272727;\n  padding-bottom: 15px;\n"])));
 var ModalTitle = styled__default['default'](Flex)(templateObject_4$2 || (templateObject_4$2 = __makeTemplateObject(["\n  align-items: center;\n  flex: 1;\n"], ["\n  align-items: center;\n  flex: 1;\n"])));
 var Modal = function (_a) {
     var title = _a.title, onDismiss = _a.onDismiss, onBack = _a.onBack, children = _a.children, _b = _a.hideCloseButton, hideCloseButton = _b === void 0 ? false : _b;
@@ -2595,12 +2595,19 @@ var templateObject_1$G, templateObject_2$d;
 
 var AccountModal = function (_a) {
     var account = _a.account, logout = _a.logout, _b = _a.onDismiss, onDismiss = _b === void 0 ? function () { return null; } : _b;
-    return (React__default['default'].createElement(Modal, { title: "Your wallet", onDismiss: onDismiss },
-        React__default['default'].createElement(Text, { fontSize: "20px", bold: true, style: { whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", marginBottom: "8px" } }, account),
-        React__default['default'].createElement(Flex, { mb: "32px" },
+    return (React__default['default'].createElement(Modal, { title: "Your wallet1333", onDismiss: onDismiss },
+        React__default['default'].createElement(Text, { fontSize: "20px", bold: true, style: { whiteSpace: "nowrap",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
+                marginBottom: "8px",
+                fontSize: "15px",
+            } }, account),
+        React__default['default'].createElement(Flex, { mb: "11px" },
             React__default['default'].createElement(CopyToClipboard, { toCopy: account }, "Copy Address")),
         React__default['default'].createElement(Flex, { justifyContent: "center" },
-            React__default['default'].createElement(Button, { size: "sm", variant: "secondary", onClick: function () {
+            React__default['default'].createElement(Button, { style: { "border": "0.863px solid rgba(255, 255, 255, 0.10)",
+                    "background": "rgba(255, 255, 255, 0.03)",
+                    "color": "#fff" }, size: "sm", variant: "secondary", onClick: function () {
                     logout();
                     window.localStorage.removeItem(localStorageKey);
                     onDismiss();

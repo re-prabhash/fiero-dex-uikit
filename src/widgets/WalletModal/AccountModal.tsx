@@ -14,15 +14,21 @@ interface Props {
 }
 
 const AccountModal: React.FC<Props> = ({ account, logout, onDismiss = () => null }) => (
-  <Modal title="Your wallet" onDismiss={onDismiss}>
+  <Modal title="Your wallet1333" onDismiss={onDismiss}>
     <Text
       fontSize="20px"
       bold
-      style={{ whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", marginBottom: "8px" }}
+      style={{ whiteSpace: "nowrap",
+  overflow: "hidden",
+  textOverflow: "ellipsis",
+  marginBottom: "8px",
+  fontSize: "15px",
+
+}}
     >
       {account}
     </Text>
-    <Flex mb="32px">
+    <Flex mb="11px">
       {/* <LinkExternal small href={`https://bscscan.com/address/${account}`} mr="16px">
         View on BscScan
       </LinkExternal> */}
@@ -30,6 +36,9 @@ const AccountModal: React.FC<Props> = ({ account, logout, onDismiss = () => null
     </Flex>
     <Flex justifyContent="center">
       <Button
+      style={{  "border": "0.863px solid rgba(255, 255, 255, 0.10)",
+  "background": "rgba(255, 255, 255, 0.03)",
+  "color": "#fff"}}
         size="sm"
         variant="secondary"
         onClick={() => {
