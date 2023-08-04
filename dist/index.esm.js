@@ -2500,9 +2500,12 @@ var WalletCard = function (_a) {
             login(walletConfig.connectorId);
             window.localStorage.setItem(localStorageKey, "1");
             onDismiss();
-        }, style: { justifyContent: "space-between" }, mb: mb, id: "wallet-connect-" + title.toLocaleLowerCase() },
-        React.createElement(Text, { bold: true, color: "primary", mr: "16px" }, title),
-        React.createElement(Icon, { width: "32px" })));
+        }, style: { justifyContent: "space-between", "background": "transparent",
+            "border": "1px solid rgba(255,255,255,0.1)", display: "block" }, mb: mb, id: "wallet-connect-" + title.toLocaleLowerCase() },
+        "      ",
+        React.createElement(Icon, { width: "32px" }),
+        React.createElement("img", { src: "images/metamask.png" }),
+        React.createElement(Text, { bold: true, color: "primary" }, title)));
 };
 
 styled(Link)(templateObject_1$E || (templateObject_1$E = __makeTemplateObject(["\n  display: flex;\n  align-self: center;\n  align-items: center;\n  margin-top: 24px;\n"], ["\n  display: flex;\n  align-self: center;\n  align-items: center;\n  margin-top: 24px;\n"])));
@@ -2515,8 +2518,7 @@ var ConnectModal = function (_a) {
             setOnlyMetaMask(true);
         }
     }, []);
-    return (React.createElement(Modal, { title: "Connect to a wallet 123", onDismiss: onDismiss }, onlyMetaMask ? (React.createElement(WalletCard, { key: connectors[0].title, login: login, walletConfig: connectors[0], onDismiss: onDismiss, mb: "0" })) : (React.createElement(React.Fragment, null,
-        React.createElement("p", null, "Metamask")))));
+    return (React.createElement(Modal, { title: "Connect to a wallet", onDismiss: onDismiss }, onlyMetaMask ? (React.createElement(WalletCard, { key: connectors[0].title, login: login, walletConfig: connectors[0], onDismiss: onDismiss, mb: "0" })) : (React.createElement(React.Fragment, null, connectors.map(function (entry, index) { return (React.createElement(WalletCard, { key: entry.title, login: login, walletConfig: entry, onDismiss: onDismiss, mb: index < connectors.length - 1 ? "8px" : "0" })); })))));
 };
 var templateObject_1$E;
 
@@ -2582,7 +2584,7 @@ var templateObject_1$G, templateObject_2$d;
 
 var AccountModal = function (_a) {
     var account = _a.account, logout = _a.logout, _b = _a.onDismiss, onDismiss = _b === void 0 ? function () { return null; } : _b;
-    return (React.createElement(Modal, { title: "Your wallet1333", onDismiss: onDismiss },
+    return (React.createElement(Modal, { title: "Your wallet", onDismiss: onDismiss },
         React.createElement(Text, { fontSize: "20px", bold: true, style: {
                 whiteSpace: "nowrap",
                 overflow: "hidden",

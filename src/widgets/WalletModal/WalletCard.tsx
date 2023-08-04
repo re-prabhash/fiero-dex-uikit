@@ -22,14 +22,16 @@ const WalletCard: React.FC<Props> = ({ login, walletConfig, onDismiss, mb }) => 
         window.localStorage.setItem(localStorageKey, "1");
         onDismiss();
       }}
-      style={{ justifyContent: "space-between" }}
+      style={{ justifyContent: "space-between",  "background": "transparent",
+  "border": "1px solid rgba(255,255,255,0.1)", display:"block" }}
       mb={mb}
       id={`wallet-connect-${title.toLocaleLowerCase()}`}
-    >
-      <Text bold color="primary" mr="16px">
+    >      <Icon width="32px" />
+    <img src="images/metamask.png" />
+      <Text bold color="primary" >
         {title}
       </Text>
-      <Icon width="32px" />
+
     </Button>
   );
 };

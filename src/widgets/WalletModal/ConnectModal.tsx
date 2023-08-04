@@ -28,12 +28,12 @@ const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null }) => {
     }
   }, []);
   return (
-    <Modal title="Connect to a wallet 123" onDismiss={onDismiss}>
+    <Modal title="Connect to a wallet" onDismiss={onDismiss}>
       {onlyMetaMask ? (
         <WalletCard key={config[0].title} login={login} walletConfig={config[0]} onDismiss={onDismiss} mb={"0"} />
       ) : (
         <>
-          {/* {config.map((entry, index) => (
+          {config.map((entry, index) => (
             <WalletCard
               key={entry.title}
               login={login}
@@ -41,8 +41,7 @@ const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null }) => {
               onDismiss={onDismiss}
               mb={index < config.length - 1 ? "8px" : "0"}
             />
-          ))} */}
-          <p>Metamask</p>
+          ))}
         </>
       )}
 
