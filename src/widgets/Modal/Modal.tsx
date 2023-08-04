@@ -23,10 +23,10 @@ const StyledModal = styled.div`
 
   ${({ theme }) => theme.mediaQueries.lg} {
     width: auto;
-    min-width: 450px;
+    min-width: 450px !important;
     max-width: 100%;
   }
-  
+
   ${({ theme }) => theme.mediaQueries.xs} {
     width: auto;
     min-width: 350px;
