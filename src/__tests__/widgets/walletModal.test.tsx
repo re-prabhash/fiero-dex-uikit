@@ -21,7 +21,7 @@ it("renders ConnectModal correctly", () => {
               class="sc-bdfBwQ sc-hKgILt iEFWFe ESJmc"
               color="text"
             >
-              Connect to a wallet2222
+              Connect to a wallet
             </h2>
           </div>
           <div
@@ -43,20 +43,15 @@ it("renders ConnectModal correctly", () => {
           </div>
         </div>
         <div
-          class="sc-eCssSg gIvwGY"
+       style="text-align:center"
         >
           <button
-            class="sc-jSgupP jdAMRQ"
+           
             id="wallet-connect-metamask"
-            style="justify-content: space-between;background:#000 !important;"
+            style="justify-content: space-between; height:11px; background:#000 !important;"
             type="button" 
           >
-            <div
-              class="sc-bdfBwQ OmpVE"
-              color="primary"
-            >
-              Metamask09C
-            </div>
+       
             <svg
               class="sc-dlfnbm cqTLJf"
               color="text"
@@ -187,6 +182,13 @@ it("renders ConnectModal correctly", () => {
                 fill="#F5841F"
               />
             </svg>
+
+                 <div
+              class="sc-bdfBwQ OmpVE"
+              color="primary"
+            >
+              Metamask
+            </div>
           </button>
           <button
             class="sc-jSgupP jdAMRQ"
