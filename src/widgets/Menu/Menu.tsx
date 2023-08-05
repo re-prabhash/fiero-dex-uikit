@@ -24,12 +24,12 @@ const StyledNav = styled.nav<{ showMenu: boolean }>`
   display: flex;
   justify-content: space-between;
   align-items: center;
-padding-left: 8px;
-    border-radius: 10px;
-    margin: 10px;
-    border: 1px solid rgba(255,255,255,0.02);
-    padding-right: 6px;
-    width: calc(100% - 22px);
+  padding-left: 8px;
+  border-radius: 10px;
+  margin: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.02);
+  padding-right: 6px;
+  width: calc(100% - 22px);
   height: ${MENU_HEIGHT}px;
   background-color: ${({ theme }) => theme.nav.background};
   z-index: 20;
