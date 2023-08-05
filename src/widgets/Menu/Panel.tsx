@@ -11,7 +11,7 @@ interface Props extends PanelProps, PushedProps {
 }
 
 const StyledPanel = styled.div<{ isPushed: boolean; showMenu: boolean }>`
-  height: calc(100% - 123px);
+  height: calc(100% - 93px);
   top: 69px;
   margin: 10px;
   border-radius: 10px;

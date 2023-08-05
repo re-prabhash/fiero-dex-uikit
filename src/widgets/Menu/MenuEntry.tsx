@@ -29,9 +29,9 @@ const MenuEntry = styled.div<Props>`
   align-items: center;
   height: ${MENU_ENTRY_HEIGHT}px;
   padding: ${({ secondary }) => (secondary ? "0 32px" : "0 16px")};
-  font-size: ${({ secondary }) => (secondary ? "14px" : "16px")};
+  font-size: ${({ secondary }) => (secondary ? "14px" : "13px")};
   background-color: ${({ secondary, theme }) => (secondary ? theme.colors.background : "transparent")};
-  color: ${({ theme }) => theme.colors.textSubtle};
+  color: rgba(255, 255, 255, 0.40);
   box-shadow: ${({ isActive, theme }) => (isActive ? `inset 4px 0px 0px ${theme.colors.primary}` : "none")};
 
   a {
@@ -46,10 +46,11 @@ const MenuEntry = styled.div<Props>`
   }
 
   &:hover {
-    background-color: transparent;
+background-color: transparent;
     border: 1px solid #80808040;
     border-radius: 50px;
     color: #fff;
+    font-weight: 600;
   }
 
   // Safari fix
