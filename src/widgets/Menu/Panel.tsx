@@ -11,9 +11,15 @@ interface Props extends PanelProps, PushedProps {
 }
 
 const StyledPanel = styled.div<{ isPushed: boolean; showMenu: boolean }>`
+  height: calc(100% - 123px);
+  top: 69px;
+  margin: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.02);
+
   position: fixed;
-  padding-top: ${({ showMenu }) => (showMenu ? "80px" : 0)};
-  top: 0;
+  padding-top: ${({ showMenu }) => (showMenu ? "10px" : 0)};
+
   left: 0;
   display: flex;
   flex-direction: column;
@@ -21,15 +27,13 @@ const StyledPanel = styled.div<{ isPushed: boolean; showMenu: boolean }>`
   flex-shrink: 0;
   background-color: ${({ theme }) => theme.nav.background};
   width: ${({ isPushed }) => (isPushed ? `${SIDEBAR_WIDTH_FULL}px` : 0)};
-  height: 100vh;
+
   transition: padding-top 0.2s, width 0.2s;
-  border-right: ${({ isPushed }) => (isPushed ? "2px solid rgba(133, 133, 133, 0.1)" : 0)};
   z-index: 11;
   overflow: ${({ isPushed }) => (isPushed ? "initial" : "hidden")};
   transform: translate3d(0, 0, 0);
 
   ${({ theme }) => theme.mediaQueries.nav} {
-    border-right: 2px solid rgba(133, 133, 133, 0.1);
     width: ${({ isPushed }) => `${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px`};
   }
 `;
