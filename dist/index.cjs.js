@@ -2515,7 +2515,7 @@ var WalletCard = function (_a) {
             justifyContent: "space-between",
             background: "transparent",
             border: "1px solid rgba(255, 255, 255, 0.1)",
-            display: "flex",
+            display: "block",
             height: "144px",
             margin: "20px 0 13px",
             borderRadius: "550px",
