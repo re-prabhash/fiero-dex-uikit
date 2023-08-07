@@ -25,7 +25,7 @@ const ResetCSS = createGlobalStyle`
   /* prettier-ignore */
   article, aside, details, figcaption, figure, 
   footer, header, hgroup, menu, nav, section {
-    display: block;
+    display: flex;
   }
   body {
     line-height: 1;

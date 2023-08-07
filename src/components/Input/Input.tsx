@@ -38,7 +38,7 @@ const Input = styled.input<InputProps>`
   border-radius: 16px;
   box-shadow: ${getBoxShadow};
   color: ${({ theme }) => theme.colors.text};
-  display: block;
+  display:flex;
   font-size: 16px;
   height: ${getHeight};
   outline: 0;
