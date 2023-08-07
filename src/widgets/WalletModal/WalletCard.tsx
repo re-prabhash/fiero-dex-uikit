@@ -26,7 +26,7 @@ const WalletCard: React.FC<Props> = ({ login, walletConfig, onDismiss, mb }) => 
         justifyContent: "space-between",
         background: "transparent",
         border: "1px solid rgba(255, 255, 255, 0.1)",
-        display: "block",
+        display: "flex",
         height: "144px",
         margin: "20px 0 13px",
         borderRadius: "550px",
