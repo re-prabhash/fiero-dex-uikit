@@ -47,16 +47,16 @@ const getButtonVariantProp = (prop: keyof ButtonThemeVariant) => ({
 
 const StyledButton = styled.button<ButtonProps>`
   align-items: center;
-  background: rgba(250, 5, 108, 0.08);
-  border: 1px solid rgba(255, 39, 130, 0.15);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 50px;
   box-shadow: ${getButtonVariantProp("boxShadow")};
-  color: #fa056c;
+  color: #fff;
   cursor: pointer;
   display: inline-flex;
   font-family: inherit;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
   /* max-content instead of auto for Safari fix */
   width: ${({ fullWidth }) => (fullWidth ? "100%" : "max-content")};
   height: ${({ size }) => (size === "sm" ? "40px" : "48px")};

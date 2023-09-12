@@ -24,11 +24,6 @@ const AccordionContent = styled.div<{ isOpen: boolean; isPushed: boolean; maxHei
   transition: max-height 0.3s ease-out;
   overflow: hidden;
   border-color: ${({ isOpen, isPushed }) => (isOpen && isPushed ? "rgba(133, 133, 133, 0.1)" : "transparent")};
-  // border-style: solid;
-  // border-width: 1px;
-  // border-left: 2px solid ;
-  // border-right: 2px solid ;
-  // border-bottom: 2px solid ;
 `;
 const MainContainer = styled.div<{ isOpen: boolean; isPushed: boolean }>`
   transition: max-height 0.3s ease-out;
@@ -36,8 +31,15 @@ const MainContainer = styled.div<{ isOpen: boolean; isPushed: boolean }>`
   border-color: ${({ isOpen, isPushed }) => (isOpen && isPushed ? "rgba(133, 133, 133, 0.1)" : "transparent")};
   border-style: solid;
   border-radius: 22px;
-  margin: 6px;
+  margin: 5px;
   border-width: ${({ isOpen, isPushed }) => (isOpen && isPushed ? `1px` : 0)};
+`;
+const PartitionLine = styled.div<{ isOpen: boolean; isPushed: boolean }>`
+  transition: max-height 0.3s ease-out;
+  overflow: hidden;
+  border-color: ${({ isOpen, isPushed }) => (isOpen && isPushed ? "rgba(133, 133, 133, 0.1)" : "transparent")};
+  border-style: solid;
+  border-width: 1px;
 `;
 
 const Accordion: React.FC<Props> = ({
@@ -68,6 +70,7 @@ const Accordion: React.FC<Props> = ({
           <LinkLabel isPushed={isPushed}>{label}</LinkLabel>
           {isOpen ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
         </MenuEntry>
+        <PartitionLine isOpen={isOpen} isPushed={isPushed} />
         <AccordionContent
           isOpen={isOpen}
           isPushed={isPushed}
