@@ -35,10 +35,9 @@ const MainContainer = styled.div<{ isOpen: boolean; isPushed: boolean }>`
   overflow: hidden;
   border-color: ${({ isOpen, isPushed }) => (isOpen && isPushed ? "rgba(133, 133, 133, 0.1)" : "transparent")};
   border-style: solid;
-  border-width: 1px;
-  border-left: ${({ isOpen }) => (isOpen ? `1px solid` : 0)};
-  border-right: ${({ isOpen }) => (isOpen ? `1px solid` : 0)};
-  border-bottom: ${({ isOpen }) => (isOpen ? `1px solid` : 0)};
+  border-radius: 22px;
+  margin: 6px;
+  border-width: ${({ isOpen, isPushed }) => (isOpen && isPushed ? `1px` : 0)};
 `;
 
 const Accordion: React.FC<Props> = ({

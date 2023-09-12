@@ -2236,7 +2236,7 @@ var LinkLabel = styled__default['default'].div(templateObject_2$a || (templateOb
     var isPushed = _a.isPushed, theme = _a.theme;
     return (isPushed ? theme.colors.textSubtle : "transparent");
 });
-var MenuEntry = styled__default['default'].div(templateObject_3$6 || (templateObject_3$6 = __makeTemplateObject(["\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  height: ", "px;\n  padding: ", ";\n  font-size: ", ";\n  background-color: ", ";\n  color: rgba(255, 255, 255, 0.4);\n\n  a {\n    display: flex;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n  }\n\n  svg {\n    fill: ", ";\n  }\n\n  &:hover {\n    background-color: transparent;\n    border-radius: 50px;\n    color: #fff;\n    font-weight: 600;\n  }\n\n  // Safari fix\n  flex-shrink: 0;\n\n  &.rainbow {\n    -webkit-background-clip: text;\n    animation: ", " 3s ease-in-out infinite;\n    background: ", ";\n    background-size: 200% 100%;\n    font-weight: bold;\n  }\n  ", "\n"], ["\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  height: ", "px;\n  padding: ", ";\n  font-size: ", ";\n  background-color: ", ";\n  color: rgba(255, 255, 255, 0.4);\n\n  a {\n    display: flex;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n  }\n\n  svg {\n    fill: ", ";\n  }\n\n  &:hover {\n    background-color: transparent;\n    border-radius: 50px;\n    color: #fff;\n    font-weight: 600;\n  }\n\n  // Safari fix\n  flex-shrink: 0;\n\n  &.rainbow {\n    -webkit-background-clip: text;\n    animation: ", " 3s ease-in-out infinite;\n    background: ", ";\n    background-size: 200% 100%;\n    font-weight: bold;\n  }\n  ",
+var MenuEntry = styled__default['default'].div(templateObject_3$6 || (templateObject_3$6 = __makeTemplateObject(["\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  height: ", "px;\n  padding: ", ";\n  font-size: ", ";\n  background-color: ", ";\n  color: rgba(255, 255, 255, 0.4);\n\n  a {\n    display: flex;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n  }\n\n  svg {\n    fill: ", ";\n  }\n\n  &:hover {\n    background-color: transparent;\n    border-radius: 50px;\n    color: #fff;\n    font-weight: 600;\n    padding: 0 9px;\n  }\n\n  // Safari fix\n  flex-shrink: 0;\n\n  &.rainbow {\n    -webkit-background-clip: text;\n    animation: ", " 3s ease-in-out infinite;\n    background: ", ";\n    background-size: 200% 100%;\n    font-weight: bold;\n  }\n  ", "\n"], ["\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  height: ", "px;\n  padding: ", ";\n  font-size: ", ";\n  background-color: ", ";\n  color: rgba(255, 255, 255, 0.4);\n\n  a {\n    display: flex;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n  }\n\n  svg {\n    fill: ", ";\n  }\n\n  &:hover {\n    background-color: transparent;\n    border-radius: 50px;\n    color: #fff;\n    font-weight: 600;\n    padding: 0 9px;\n  }\n\n  // Safari fix\n  flex-shrink: 0;\n\n  &.rainbow {\n    -webkit-background-clip: text;\n    animation: ", " 3s ease-in-out infinite;\n    background: ", ";\n    background-size: 200% 100%;\n    font-weight: bold;\n  }\n  ",
     "\n"])), MENU_ENTRY_HEIGHT, function (_a) {
     var secondary = _a.secondary;
     return (secondary ? "0 32px" : "0 16px");
@@ -2255,7 +2255,7 @@ var MenuEntry = styled__default['default'].div(templateObject_3$6 || (templateOb
 }, function (_a) {
     var isActive = _a.isActive;
     return isActive &&
-        "\n  border: 1px solid #80808040;\n  border-radius: 50px;\n";
+        "\n  border: 1px solid #80808040;\n  border-radius: 50px;\n  padding: 0 9px;\n";
 });
 MenuEntry.defaultProps = {
     secondary: false,
@@ -2272,18 +2272,12 @@ var AccordionContent = styled__default['default'].div(templateObject_2$b || (tem
     var isOpen = _a.isOpen, isPushed = _a.isPushed;
     return (isOpen && isPushed ? "rgba(133, 133, 133, 0.1)" : "transparent");
 });
-var MainContainer = styled__default['default'].div(templateObject_3$7 || (templateObject_3$7 = __makeTemplateObject(["\n  transition: max-height 0.3s ease-out;\n  overflow: hidden;\n  border-color: ", ";\n  border-style: solid;\n  border-width: 1px;\n  border-left: ", ";\n  border-right: ", ";\n  border-bottom: ", ";\n"], ["\n  transition: max-height 0.3s ease-out;\n  overflow: hidden;\n  border-color: ", ";\n  border-style: solid;\n  border-width: 1px;\n  border-left: ", ";\n  border-right: ", ";\n  border-bottom: ", ";\n"])), function (_a) {
+var MainContainer = styled__default['default'].div(templateObject_3$7 || (templateObject_3$7 = __makeTemplateObject(["\n  transition: max-height 0.3s ease-out;\n  overflow: hidden;\n  border-color: ", ";\n  border-style: solid;\n  border-radius: 22px;\n  margin: 6px;\n  border-width: ", ";\n"], ["\n  transition: max-height 0.3s ease-out;\n  overflow: hidden;\n  border-color: ", ";\n  border-style: solid;\n  border-radius: 22px;\n  margin: 6px;\n  border-width: ", ";\n"])), function (_a) {
     var isOpen = _a.isOpen, isPushed = _a.isPushed;
     return (isOpen && isPushed ? "rgba(133, 133, 133, 0.1)" : "transparent");
 }, function (_a) {
-    var isOpen = _a.isOpen;
-    return (isOpen ? "1px solid" : 0);
-}, function (_a) {
-    var isOpen = _a.isOpen;
-    return (isOpen ? "1px solid" : 0);
-}, function (_a) {
-    var isOpen = _a.isOpen;
-    return (isOpen ? "1px solid" : 0);
+    var isOpen = _a.isOpen, isPushed = _a.isPushed;
+    return (isOpen && isPushed ? "1px" : 0);
 });
 var Accordion = function (_a) {
     var label = _a.label, icon = _a.icon, isPushed = _a.isPushed, pushNav = _a.pushNav, _b = _a.initialOpenState, initialOpenState = _b === void 0 ? false : _b, children = _a.children, className = _a.className;

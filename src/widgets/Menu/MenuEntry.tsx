@@ -49,6 +49,7 @@ const MenuEntry = styled.div<Props>`
     border-radius: 50px;
     color: #fff;
     font-weight: 600;
+    padding: 0 9px;
   }
 
   // Safari fix
@@ -66,6 +67,7 @@ const MenuEntry = styled.div<Props>`
     `
   border: 1px solid #80808040;
   border-radius: 50px;
+  padding: 0 9px;
 `}
 `;
 MenuEntry.defaultProps = {
