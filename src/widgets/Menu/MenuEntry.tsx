@@ -32,6 +32,7 @@ const MenuEntry = styled.div<Props>`
   font-size: ${({ secondary }) => (secondary ? "14px" : "13px")};
   // background-color: ${({ secondary, theme }) => (secondary ? theme.colors.background : "transparent")};
   color: rgba(255, 255, 255, 0.4);
+  border: 1px solid ${({ secondary, theme }) => (secondary ? theme.colors.background : "transparent")};
 
   a {
     display: flex;
