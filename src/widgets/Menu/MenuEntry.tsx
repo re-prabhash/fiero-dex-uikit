@@ -32,8 +32,6 @@ const MenuEntry = styled.div<Props>`
   font-size: ${({ secondary }) => (secondary ? "14px" : "13px")};
   background-color: ${({ secondary, theme }) => (secondary ? theme.colors.background : "transparent")};
   color: rgba(255, 255, 255, 0.4);
-  border: 1px solid #80808040;
-  border-radius: 50px;
 
   a {
     display: flex;
@@ -63,6 +61,12 @@ const MenuEntry = styled.div<Props>`
     background-size: 200% 100%;
     font-weight: bold;
   }
+  ${({ isActive, theme }) =>
+    isActive &&
+    `
+  border: 1px solid #80808040;
+  border-radius: 50px;
+`}
 `;
 MenuEntry.defaultProps = {
   secondary: false,
