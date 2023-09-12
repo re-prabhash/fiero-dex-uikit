@@ -61,7 +61,7 @@ const MenuEntry = styled.div<Props>`
     background-size: 200% 100%;
     font-weight: bold;
   }
-  ${({ isActive, theme }) =>
+  ${({ isActive }) =>
     isActive &&
     `
   border: 1px solid #80808040;

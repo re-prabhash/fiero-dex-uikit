@@ -24,8 +24,21 @@ const AccordionContent = styled.div<{ isOpen: boolean; isPushed: boolean; maxHei
   transition: max-height 0.3s ease-out;
   overflow: hidden;
   border-color: ${({ isOpen, isPushed }) => (isOpen && isPushed ? "rgba(133, 133, 133, 0.1)" : "transparent")};
+  // border-style: solid;
+  // border-width: 1px;
+  // border-left: 2px solid ;
+  // border-right: 2px solid ;
+  // border-bottom: 2px solid ;
+`;
+const MainContainer = styled.div<{ isOpen: boolean; isPushed: boolean }>`
+  transition: max-height 0.3s ease-out;
+  overflow: hidden;
+  border-color: ${({ isOpen, isPushed }) => (isOpen && isPushed ? "rgba(133, 133, 133, 0.1)" : "transparent")};
   border-style: solid;
   border-width: 1px;
+  border-left: ${({ isOpen }) => (isOpen ? `1px solid` : 0)};
+  border-right: ${({ isOpen }) => (isOpen ? `1px solid` : 0)};
+  border-bottom: ${({ isOpen }) => (isOpen ? `1px solid` : 0)};
 `;
 
 const Accordion: React.FC<Props> = ({
@@ -50,18 +63,20 @@ const Accordion: React.FC<Props> = ({
 
   return (
     <Container>
-      <MenuEntry onClick={handleClick} className={className}>
-        {icon}
-        <LinkLabel isPushed={isPushed}>{label}</LinkLabel>
-        {isOpen ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
-      </MenuEntry>
-      <AccordionContent
-        isOpen={isOpen}
-        isPushed={isPushed}
-        maxHeight={React.Children.count(children) * MENU_ENTRY_HEIGHT}
-      >
-        {children}
-      </AccordionContent>
+      <MainContainer isOpen={isOpen} isPushed={isPushed}>
+        <MenuEntry onClick={handleClick} className={className}>
+          {icon}
+          <LinkLabel isPushed={isPushed}>{label}</LinkLabel>
+          {isOpen ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
+        </MenuEntry>
+        <AccordionContent
+          isOpen={isOpen}
+          isPushed={isPushed}
+          maxHeight={React.Children.count(children) * MENU_ENTRY_HEIGHT}
+        >
+          {children}
+        </AccordionContent>
+      </MainContainer>
     </Container>
   );
 };
