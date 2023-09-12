@@ -30,7 +30,7 @@ const MenuEntry = styled.div<Props>`
   height: ${MENU_ENTRY_HEIGHT}px;
   padding: ${({ secondary }) => (secondary ? "0 32px" : "0 16px")};
   font-size: ${({ secondary }) => (secondary ? "14px" : "13px")};
-  background-color: ${({ secondary, theme }) => (secondary ? theme.colors.background : "transparent")};
+  // background-color: ${({ secondary, theme }) => (secondary ? theme.colors.background : "transparent")};
   color: rgba(255, 255, 255, 0.4);
 
   a {
@@ -49,7 +49,6 @@ const MenuEntry = styled.div<Props>`
     border-radius: 50px;
     color: #fff;
     font-weight: 600;
-    padding: 0 9px;
   }
 
   // Safari fix
@@ -67,7 +66,7 @@ const MenuEntry = styled.div<Props>`
     `
   border: 1px solid #80808040;
   border-radius: 50px;
-  padding: 0 9px;
+  padding: 0 7px;
 `}
 `;
 MenuEntry.defaultProps = {
