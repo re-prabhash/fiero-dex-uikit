@@ -28,11 +28,11 @@ const MenuEntry = styled.div<Props>`
   display: flex;
   align-items: center;
   height: ${MENU_ENTRY_HEIGHT}px;
-  padding: ${({ secondary }) => (secondary ? "0 16px" : "0 16px")};
+  padding: ${({ secondary }) => (secondary ? "0 5px" : "0 5px")};
   font-size: ${({ secondary }) => (secondary ? "14px" : "14px")};
   // background-color: ${({ secondary, theme }) => (secondary ? theme.colors.background : "transparent")};
   color: rgba(255, 255, 255, 0.4);
-  border: 1px solid ${({ secondary, theme }) => (secondary ? theme.colors.background : "transparent")};
+  // border: 1px solid ${({ secondary, theme }) => (secondary ? theme.colors.background : "transparent")};
 
   a {
     display: flex;
