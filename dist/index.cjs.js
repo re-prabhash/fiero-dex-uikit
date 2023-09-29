@@ -1893,7 +1893,7 @@ var Logo = function (_a) {
     var isDark = _a.isDark; __rest(_a, ["isDark"]);
     // const textColor = isDark ? "#FFFFFF" : "#000000";
     return (React__default['default'].createElement("figure", null,
-        React__default['default'].createElement("image", { width: "100%", href: isDark ? "/images/LogoTextNewDark.png" : "/images/egg/LogoTextNewWhite.png" })));
+        React__default['default'].createElement("image", { width: "100%", href: isDark ? "/images/LogoTextNewDark.png" : "/images/LogoTextNewWhite.png" })));
 };
 
 var Icon$Q = function (props) {
