@@ -10,7 +10,7 @@ const Logo: React.FC<LogoProps> = ({ isDark, ...props }) => {
   // const textColor = isDark ? "#FFFFFF" : "#000000";
   return (
     <figure>
-      <image width="100%" href={isDark ? "/images/egg/LogoTextNewDark.png" : "/images/egg/LogoTextNewWhite.png"} />
+      <image width="100%" href={isDark ? "/images/LogoTextNewDark.png" : "/images/egg/LogoTextNewWhite.png"} />
     </figure>
   );
 };
