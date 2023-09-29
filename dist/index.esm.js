@@ -347,7 +347,7 @@ var Icon$p = function (props) {
 
 var Icon$q = function (props) {
     return (React.createElement("figure", __assign({ viewBox: "0 0 32 32" }, props),
-        React.createElement("img", { width: "32", height: "32", src: "images/LogoTextNewDark.png", alt: "" })));
+        React.createElement("img", { width: "32", height: "32", src: "images/footer_logo.png", alt: "" })));
 };
 
 var Icon$r = function (props) {
