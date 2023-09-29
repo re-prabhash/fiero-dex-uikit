@@ -1890,8 +1890,9 @@ var Icon$P = function (props) {
 };
 
 var Logo = function (_a) {
-    var isDark = _a.isDark, props = __rest(_a, ["isDark"]);
-    return (React__default['default'].createElement(Svg, __assign({ viewBox: "0 0 120 29" }, props),
+    var isDark = _a.isDark; __rest(_a, ["isDark"]);
+    // const textColor = isDark ? "#FFFFFF" : "#000000";
+    return (React__default['default'].createElement("figure", null,
         React__default['default'].createElement("image", { width: "100%", href: isDark ? "/images/egg/LogoTextNewDark.png" : "/images/egg/LogoTextNewWhite.png" })));
 };
 
