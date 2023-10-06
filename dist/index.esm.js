@@ -1879,7 +1879,7 @@ var Logo = function (_a) {
     var isDark = _a.isDark, props = __rest(_a, ["isDark"]);
     // const textColor = isDark ? "#FFFFFF" : "#000000";
     return (React.createElement("figure", __assign({ viewBox: "0 0 32 32" }, props),
-        React.createElement("image", { width: "100%", href: isDark ? "/images/LogoTextNewDark.png" : "/images/LogoTextNewWhite.png" })));
+        React.createElement("img", { width: "100%", height: "32", src: isDark ? "/images/LogoTextNewDark.png" : "/images/LogoTextNewWhite.png", alt: "" })));
 };
 
 var Icon$Q = function (props) {
