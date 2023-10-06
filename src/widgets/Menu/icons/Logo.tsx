@@ -13,8 +13,8 @@ const Logo: React.FC<LogoProps> = ({ isDark, ...props }) => {
       <img
         width="100%"
         height="32"
-        src={isDark ? "/images/LogoTextNewDark.png" : "/images/LogoTextNewWhite.png"}
-        alt=""
+        src={isDark ? "images/LogoTextNewDark.png" : "images/LogoTextNewWhite.png"}
+        alt="LogoTextNewDark"
       />
     </figure>
   );
